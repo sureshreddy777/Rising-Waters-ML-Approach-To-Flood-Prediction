@@ -1,0 +1,15 @@
+Loading D:\apsche internship\ProjectFiles\Flask\floods.save...
+
+--- Inspecting Model ---
+Type: <class 'xgboost.sklearn.XGBClassifier'>
+n_features_in_: 5
+feature_names_in_: Not found (sklearn version mismatch?)
+XGBoost feature names: None
+
+Loading D:\apsche internship\ProjectFiles\Flask\transform.save...
+
+--- Inspecting Scaler ---
+Type: <class 'sklearn.preprocessing._data.StandardScaler'>
+n_features_in_: 5
+Scaler means: [  35.5862069  2952.16896552   24.72758621  344.43448276 2064.40689655]
+Scaler scale: [  4.15656723 284.96194919  22.63367794  91.55967067 306.44004187]

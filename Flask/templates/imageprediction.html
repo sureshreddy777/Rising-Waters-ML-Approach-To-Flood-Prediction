@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Details - Floods Prediction</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-water text-primary"></i>
+                Floods Prediction
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/"><i class="fas fa-home me-1"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/intro"><i class="fas fa-info-circle me-1"></i> Introduction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/image"><i class="fas fa-images me-1"></i> Images</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/imageprediction"><i class="fas fa-camera me-1"></i> Image
+                            Prediction</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-container container mt-5 pt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-11">
+                <div class="card shadow-lg border-0">
+                    <div class="card-header">
+                        <h3><i class="fas fa-microchip me-2"></i>Prediction Model Details</h3>
+                        <p class="text-white-50 mb-0">Technical details about the machine learning implementation</p>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-primary border-bottom pb-2"><i
+                                class="fas fa-network-wired me-2"></i>Machine Learning Models Used</h5>
+
+                        <div class="row mt-4 g-4">
+                            <div class="col-md-6">
+                                <div class="card h-100 border-0 shadow-sm hover-effect">
+                                    <div class="card-body text-center">
+                                        <div class="icon-circle bg-primary-light text-primary mb-3 mx-auto">
+                                            <i class="fas fa-tree fa-2x"></i>
+                                        </div>
+                                        <h6 class="fw-bold">Decision Tree</h6>
+                                        <p class="card-text small text-muted">A tree-based model that makes predictions
+                                            by learning simple decision rules inferred from data features.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 border-0 shadow-sm hover-effect">
+                                    <div class="card-body text-center">
+                                        <div class="icon-circle bg-success-light text-success mb-3 mx-auto">
+                                            <i class="fas fa-forest fa-2x"></i>
+                                        </div>
+                                        <h6 class="fw-bold">Random Forest</h6>
+                                        <p class="card-text small text-muted">An ensemble method combining multiple
+                                            decision trees for more robust and accurate predictions.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 border-0 shadow-sm hover-effect">
+                                    <div class="card-body text-center">
+                                        <div class="icon-circle bg-info-light text-info mb-3 mx-auto">
+                                            <i class="fas fa-share-alt fa-2x"></i>
+                                        </div>
+                                        <h6 class="fw-bold">K-Nearest Neighbors</h6>
+                                        <p class="card-text small text-muted">A simple, instance-based learning
+                                            algorithm that classifies based on nearest neighbors in the feature space.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 border-left-warning shadow-sm hover-effect">
+                                    <div class="card-body text-center">
+                                        <div class="icon-circle bg-warning-light text-warning mb-3 mx-auto">
+                                            <i class="fas fa-rocket fa-2x"></i>
+                                        </div>
+                                        <h6 class="fw-bold">XGBoost</h6>
+                                        <p class="card-text small text-muted"><strong>Primary Model:</strong> Gradient
+                                            boosting framework providing superior accuracy for flood prediction.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h5 class="card-title text-primary border-bottom pb-2 mt-5"><i
+                                class="fas fa-tachometer-alt me-2"></i>Model Performance Metrics</h5>
+                        <div class="table-responsive">
+                            <table class="table table-hover mt-3 align-middle">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th style="width: 30%;">Metric</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Accuracy</strong></td>
+                                        <td>Overall correctness of predictions</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Precision</strong></td>
+                                        <td>True positive predictions out of all positive predictions</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Recall</strong></td>
+                                        <td>True positive predictions out of all actual positives</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Confidence Score</strong></td>
+                                        <td>Probability associated with the prediction</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h5 class="card-title text-primary border-bottom pb-2 mt-5"><i
+                                class="fas fa-traffic-light me-2"></i>Interpretation Guide</h5>
+                        <div
+                            class="d-flex align-items-center p-3 bg-danger-light border-start border-danger border-5 mb-3 rounded-end">
+                            <i class="fas fa-exclamation-circle text-danger fa-2x me-3"></i>
+                            <div>
+                                <strong>High Risk:</strong> The model predicts a high probability of flooding.
+                                Emergency preparedness measures should be considered.
+                            </div>
+                        </div>
+                        <div
+                            class="d-flex align-items-center p-3 bg-success-light border-start border-success border-5 mb-3 rounded-end">
+                            <i class="fas fa-check-circle text-success fa-2x me-3"></i>
+                            <div>
+                                <strong>Low Risk:</strong> The model predicts a low probability of flooding.
+                                Normal conditions are expected.
+                            </div>
+                        </div>
+
+                        <div class="mt-4 text-center">
+                            <a href="/" class="btn btn-primary px-5"><i class="fas fa-calculator me-2"></i>Make a
+                                Prediction</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

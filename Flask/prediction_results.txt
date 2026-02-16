@@ -1,0 +1,19 @@
+--- Prediction Results ---
+
+Case: Average Values
+Input: [36.28, 2925.48, 27.73, 377.25, 2022.84]
+Prediction: 0
+Probabilities: [0.9873084 0.0126916]
+------------------------------
+
+Case: Extreme High Rainfall
+Input: [44.0, 5000.0, 100.0, 1000.0, 4000.0]
+Prediction: 1
+Probabilities: [0.01246476 0.98753524]
+------------------------------
+
+Case: Max Values from Dataset
+Input: [44.0, 4257.8, 98.1, 915.2, 3451.3]
+Prediction: 1
+Probabilities: [0.01246476 0.98753524]
+------------------------------

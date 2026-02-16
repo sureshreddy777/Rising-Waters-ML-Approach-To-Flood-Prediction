@@ -1,0 +1,41 @@
+--- Sensitivity Analysis (Varying Annual Rainfall) ---
+
+Annual: 3000, Jun-Sep: 2100.0
+Prediction: 0
+Probabilities: [0.9873084 0.0126916]
+--------------------
+
+Annual: 3200, Jun-Sep: 2240.0
+Prediction: 0
+Probabilities: [0.9873084 0.0126916]
+--------------------
+
+Annual: 3400, Jun-Sep: 2380.0
+Prediction: 0
+Probabilities: [0.9873084 0.0126916]
+--------------------
+
+Annual: 3600, Jun-Sep: 2520.0
+Prediction: 1
+Probabilities: [0.01246476 0.98753524]
+--------------------
+
+Annual: 3800, Jun-Sep: 2660.0
+Prediction: 1
+Probabilities: [0.01246476 0.98753524]
+--------------------
+
+Annual: 4000, Jun-Sep: 2800.0
+Prediction: 1
+Probabilities: [0.01246476 0.98753524]
+--------------------
+
+Annual: 4200, Jun-Sep: 2940.0
+Prediction: 1
+Probabilities: [0.01246476 0.98753524]
+--------------------
+
+Annual: 4400, Jun-Sep: 3080.0
+Prediction: 1
+Probabilities: [0.01246476 0.98753524]
+--------------------

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dataset - Floods Prediction</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-water text-primary"></i>
+                Floods Prediction
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/"><i class="fas fa-home me-1"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/intro"><i class="fas fa-info-circle me-1"></i> Introduction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/image"><i class="fas fa-images me-1"></i> Images</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/imageprediction"><i class="fas fa-camera me-1"></i> Image
+                            Prediction</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-container container mt-5 pt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-11">
+                <div class="card shadow-lg border-0">
+                    <div class="card-header">
+                        <h3><i class="fas fa-database me-2"></i>Dataset Overview</h3>
+                        <p class="text-white-50 mb-0">Analysis of the meteorological data used for training</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-info border-0 shadow-sm d-flex align-items-center" role="alert">
+                            <i class="fas fa-info-circle fa-2x me-3"></i>
+                            <div>
+                                <strong>Dataset Description:</strong> The flood dataset contains comprehensive
+                                meteorological
+                                and hydrological data collected over multiple years from various geographical locations.
+                            </div>
+                        </div>
+
+                        <h5 class="card-title text-primary border-bottom pb-2 mt-5"><i
+                                class="fas fa-table me-2"></i>Features in the Dataset</h5>
+                        <div class="table-responsive">
+                            <table class="table table-hover mt-3 align-middle">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Feature</th>
+                                        <th>Description</th>
+                                        <th>Unit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><i class="fas fa-cloud me-2 text-muted"></i>Cloud Cover</td>
+                                        <td>Percentage of sky covered by cloud</td>
+                                        <td>%</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fas fa-cloud-showers-heavy me-2 text-muted"></i>Annual Rainfall
+                                        </td>
+                                        <td>Total precipitation in a year</td>
+                                        <td>mm</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fas fa-calendar-day me-2 text-muted"></i>Jan-Feb Rainfall</td>
+                                        <td>Rainfall during January-February</td>
+                                        <td>mm</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fas fa-calendar-day me-2 text-muted"></i>March-May Rainfall</td>
+                                        <td>Rainfall during March-May</td>
+                                        <td>mm</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fas fa-calendar-day me-2 text-muted"></i>June-Sep Rainfall</td>
+                                        <td>Rainfall during June-September</td>
+                                        <td>mm</td>
+                                    </tr>
+                                    <tr class="table-success fw-bold">
+                                        <td><i class="fas fa-exclamation-triangle me-2 text-success"></i>Flood Status
+                                        </td>
+                                        <td>Target variable (Flood/No Flood)</td>
+                                        <td>Binary (0/1)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h5 class="card-title text-primary border-bottom pb-2 mt-5"><i
+                                class="fas fa-chart-pie me-2"></i>Dataset Statistics</h5>
+                        <div class="row g-3 mt-2">
+                            <div class="col-md-6">
+                                <div class="p-3 bg-light rounded d-flex align-items-start">
+                                    <i class="fas fa-history text-secondary mt-1 me-3"></i>
+                                    <div>
+                                        <strong>Total Records</strong>
+                                        <p class="mb-0 text-muted small">Comprehensive historical data from multiple
+                                            years</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-3 bg-light rounded d-flex align-items-start">
+                                    <i class="fas fa-layer-group text-secondary mt-1 me-3"></i>
+                                    <div>
+                                        <strong>Features</strong>
+                                        <p class="mb-0 text-muted small">5 independent variables + 1 target variable</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-3 bg-light rounded d-flex align-items-start">
+                                    <i class="fas fa-clock text-secondary mt-1 me-3"></i>
+                                    <div>
+                                        <strong>Time Period</strong>
+                                        <p class="mb-0 text-muted small">Multi-year meteorological records</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-3 bg-light rounded d-flex align-items-start">
+                                    <i class="fas fa-check-double text-secondary mt-1 me-3"></i>
+                                    <div>
+                                        <strong>Data Quality</strong>
+                                        <p class="mb-0 text-muted small">Cleaned and preprocessed data</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h5 class="card-title text-primary border-bottom pb-2 mt-5"><i class="fas fa-cogs me-2"></i>Data
+                            Preprocessing Applied</h5>
+                        <ul class="list-group list-group-flush mt-3">
+                            <li class="list-group-item bg-transparent"><i
+                                    class="fas fa-check text-success me-2"></i>Standard Scaling to normalize feature
+                                values</li>
+                            <li class="list-group-item bg-transparent"><i
+                                    class="fas fa-check text-success me-2"></i>Missing value handling</li>
+                            <li class="list-group-item bg-transparent"><i
+                                    class="fas fa-check text-success me-2"></i>Outlier detection and treatment</li>
+                            <li class="list-group-item bg-transparent"><i
+                                    class="fas fa-check text-success me-2"></i>Train-Test split (75-25)</li>
+                        </ul>
+
+                        <div class="mt-4 text-center">
+                            <a href="/" class="btn btn-primary px-5"><i class="fas fa-arrow-left me-2"></i>Back to
+                                Prediction</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

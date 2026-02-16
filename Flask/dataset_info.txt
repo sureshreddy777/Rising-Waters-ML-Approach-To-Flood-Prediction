@@ -1,0 +1,27 @@
+Columns: ['Temp', 'Humidity', 'Cloud Cover', 'ANNUAL', 'Jan-Feb', 'Mar-May', 'Jun-Sep', 'Oct-Dec', 'avgjune', 'sub', 'flood']
+Means:
+Temp             29.600000
+Humidity         73.852174
+Cloud Cover      36.286957
+ANNUAL         2925.487826
+Jan-Feb          27.739130
+Mar-May         377.253913
+Jun-Sep        2022.840870
+Oct-Dec         497.636522
+avgjune         218.100870
+sub             439.801739
+flood             0.139130
+dtype: float64
+Max:
+Temp             31.000000
+Humidity         79.000000
+Cloud Cover      44.000000
+ANNUAL         4257.800000
+Jan-Feb          98.100000
+Mar-May         915.200000
+Jun-Sep        3451.300000
+Oct-Dec         823.300000
+avgjune         366.066667
+sub             982.700000
+flood             1.000000
+dtype: float64

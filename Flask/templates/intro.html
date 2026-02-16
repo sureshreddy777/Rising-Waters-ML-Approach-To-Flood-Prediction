@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction - Floods Prediction</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-water text-primary"></i>
+                Floods Prediction
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/"><i class="fas fa-home me-1"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/intro"><i class="fas fa-info-circle me-1"></i>
+                            Introduction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/image"><i class="fas fa-images me-1"></i> Images</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/imageprediction"><i class="fas fa-camera me-1"></i> Image
+                            Prediction</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-container container mt-5 pt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-11">
+                <div class="card shadow-lg border-0">
+                    <div class="card-header">
+                        <h3><i class="fas fa-book-open me-2"></i>Introduction to Flood Prediction</h3>
+                        <p class="text-white-50 mb-0">Understanding the science behind the model</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="section mb-4">
+                            <h5 class="card-title text-primary border-bottom pb-2"><i
+                                    class="fas fa-info-circle me-2"></i>Overview</h5>
+                            <p class="card-text lead fs-6">
+                                This Flood Prediction System uses machine learning algorithms to predict the likelihood
+                                of flooding based on meteorological data. The model analyzes various factors such as
+                                cloud cover,
+                                rainfall patterns, and seasonal precipitation to provide accurate flood risk
+                                assessments.
+                            </p>
+                        </div>
+
+                        <div class="section mb-4">
+                            <h5 class="card-title text-primary border-bottom pb-2 mt-4"><i
+                                    class="fas fa-star me-2"></i>Key Features</h5>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center p-3 bg-light rounded hover-effect">
+                                        <i class="fas fa-cloud text-info fa-2x me-3"></i>
+                                        <div>
+                                            <strong>Cloud Cover Analysis</strong>
+                                            <p class="mb-0 small text-muted">Measures atmospheric moisture</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center p-3 bg-light rounded hover-effect">
+                                        <i class="fas fa-cloud-showers-heavy text-primary fa-2x me-3"></i>
+                                        <div>
+                                            <strong>Annual Rainfall</strong>
+                                            <p class="mb-0 small text-muted">Total precipitation tracking</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center p-3 bg-light rounded hover-effect">
+                                        <i class="fas fa-calendar-alt text-success fa-2x me-3"></i>
+                                        <div>
+                                            <strong>Seasonal Patterns</strong>
+                                            <p class="mb-0 small text-muted">Analysis across seasons</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center p-3 bg-light rounded hover-effect">
+                                        <i class="fas fa-brain text-warning fa-2x me-3"></i>
+                                        <div>
+                                            <strong>Advanced ML Models</strong>
+                                            <p class="mb-0 small text-muted">XGBoost & Random Forest</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section mb-4">
+                            <h5 class="card-title text-primary border-bottom pb-2 mt-4"><i
+                                    class="fas fa-bullseye me-2"></i>Model Accuracy</h5>
+                            <p class="card-text">
+                                The model has been trained and tested on a comprehensive dataset of meteorological
+                                records and
+                                historical flood data. It provides reliable predictions with high accuracy rates for
+                                flood risk assessment.
+                            </p>
+                        </div>
+
+                        <div class="section">
+                            <h5 class="card-title text-primary border-bottom pb-2 mt-4"><i
+                                    class="fas fa-list-ol me-2"></i>How to Use</h5>
+                            <div class="row text-center mt-3">
+                                <div class="col-md-3">
+                                    <div class="step-card p-3">
+                                        <div class="step-icon bg-primary text-white rounded-circle d-inline-flex justify-content-center align-items-center mb-2"
+                                            style="width: 40px; height: 40px;">1</div>
+                                        <p class="small">Navigate to Home</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="step-card p-3">
+                                        <div class="step-icon bg-primary text-white rounded-circle d-inline-flex justify-content-center align-items-center mb-2"
+                                            style="width: 40px; height: 40px;">2</div>
+                                        <p class="small">Enter Parameters</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="step-card p-3">
+                                        <div class="step-icon bg-primary text-white rounded-circle d-inline-flex justify-content-center align-items-center mb-2"
+                                            style="width: 40px; height: 40px;">3</div>
+                                        <p class="small">Click Predict</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="step-card p-3">
+                                        <div class="step-icon bg-primary text-white rounded-circle d-inline-flex justify-content-center align-items-center mb-2"
+                                            style="width: 40px; height: 40px;">4</div>
+                                        <p class="small">Review Results</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 text-center">
+                            <a href="/" class="btn btn-primary px-5"><i class="fas fa-arrow-right me-2"></i>Go to
+                                Prediction</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
