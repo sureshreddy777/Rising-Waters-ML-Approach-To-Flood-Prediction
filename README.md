@@ -6,6 +6,9 @@ A comprehensive machine learning-based system designed to predict the likelihood
 
 The Flood Risk Prediction System aims to provide an accessible tool for early flood detection. By analyzing key meteorological factors such as cloud cover and seasonal rainfall, the system predicts whether an area is at high or low risk of flooding.
 
+🎥 **Watch the project demo video:**  
+👉 https://drive.google.com/file/d/1IteuJyyjQ6gliBuJDW-CFIEaV52rp71e/view?usp=sharing
+
 ## 📂 Project Structure
 
 ```bash
@@ -83,3 +86,4 @@ The system predicts flood risk based on the following parameters:
 
 ## 📝 License
 This project is developed for educational and research purposes.
+
